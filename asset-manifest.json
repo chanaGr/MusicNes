@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MusicNes/static/css/main.6204a580.css",
-    "main.js": "/MusicNes/static/js/main.f0c94817.js",
+    "main.js": "/MusicNes/static/js/main.51757e64.js",
     "static/js/787.28cb0dcd.chunk.js": "/MusicNes/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/MusicNes/index.html",
     "main.6204a580.css.map": "/MusicNes/static/css/main.6204a580.css.map",
-    "main.f0c94817.js.map": "/MusicNes/static/js/main.f0c94817.js.map",
+    "main.51757e64.js.map": "/MusicNes/static/js/main.51757e64.js.map",
     "787.28cb0dcd.chunk.js.map": "/MusicNes/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6204a580.css",
-    "static/js/main.f0c94817.js"
+    "static/js/main.51757e64.js"
   ]
 }
