@@ -4,7 +4,7 @@ import './navbarc.css';
 class HomePage extends React.Component{
 render() {
     return  <>
-    <img className="logoback" src="logo2.png"></img>
+    <img className="logoback" src="/MusicNes/logo2.png"></img>
 </>
 }
    
