@@ -13,7 +13,7 @@ const NavBar = () => {
         <NavLink to="/View" className="navfont">ViewProducts</NavLink>
         <NavLink to="/Manager" className="navfont">Manager</NavLink>
       </MDBBreadcrumb>
- <p>hfghg</p>
+
        
  </>
 };
