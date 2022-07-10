@@ -50,7 +50,7 @@ constructor(props:any) {
       this.setState({subProductsList:productsList.getProductsList});
       }
       else{
-      let arr = productsList.getProductsList.filter(x=>x.getProductCategory==parseInt(temp));
+      let arr = productsList.getProductsByCodeCategory(temp);
       this.setState({subProductsList:arr});
       }
     }

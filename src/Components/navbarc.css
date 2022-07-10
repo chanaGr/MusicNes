@@ -19,14 +19,14 @@ img {
 }
 
 .navfont {
-  color: white;
+  color: black;
   margin: 40px;
   font-size: 21px;
   margin-top: 25px;
 }
 
 .navfont:hover {
-  color: white;
+  color: black;
   margin: 45px;
   font-size: 21.1px;
   margin-top: 25px;

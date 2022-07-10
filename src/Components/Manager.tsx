@@ -1,6 +1,8 @@
 import React from "react";
 import { productsList } from "../data";
+import Form from "./Form";
 import './navbarc.css';
+
 
 type MyState = {
     delete:boolean;
@@ -23,7 +25,7 @@ class Manager extends React.Component{
         codeCat:0,
         price:0,
         units:0,
-        pic:"logo.png"
+        pic:"/MusicNes/logo.png"
     }
 
     state: MyState = {
@@ -78,27 +80,17 @@ class Manager extends React.Component{
         }
         {
             this.state.add  && 
-            <form onSubmit={this.AddProduct}>
-            <p>Add Product</p>
-            <input type="text" className="inpt" min="0" placeholder="Enter Name" ></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter code"></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter codeCategory" ></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter Price"></input>   
-            <input type="number"className="inpt" min="0" placeholder="Enter Unit"></input>     
-            <input type="submit" className="btn" value="SUBMIT"/>
-            </form>
+            <>
+             <p>Add Product</p>
+           <Form SubmitFunction={this.AddProduct}></Form>
+           </>
         }
         {
             this.state.edit  && 
-            <form  onSubmit={this.EditProduct}>
+           <>
             <p>Edit Product</p>
-            <input type="text"   className="inpt" min="0"  placeholder="Enter Name" ></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter code"></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter codeCategory" ></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter Price" ></input>   
-            <input type="number" className="inpt" min="0" placeholder="Enter Unit" ></input>  
-            <input type="submit" className="btn" value="SUBMIT"/>
-            </form>
+            <Form SubmitFunction={this.EditProduct}></Form>
+            </>
         }
         </>
     }

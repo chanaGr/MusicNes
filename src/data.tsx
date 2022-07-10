@@ -81,6 +81,7 @@ export class ProductsList {
     getProductsByCodeCategory(codeCategory:string) {
         debugger
         const pro = this.productsList.filter(x => x.getProductCategory ==parseInt(codeCategory))
+        return pro;
     }
     OutOfStockProductsfun() {
         const pro = this.productsList.filter(x => x.getProductUnits < 3)
