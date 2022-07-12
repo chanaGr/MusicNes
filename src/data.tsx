@@ -84,7 +84,8 @@ export class ProductsList {
         return pro;
     }
     OutOfStockProductsfun() {
-        const pro = this.productsList.filter(x => x.getProductUnits < 3)
+        const pro = this.productsList.filter(x => x.getProductUnits <= 10)
+        return pro;
     }
 }
 

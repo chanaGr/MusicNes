@@ -29,7 +29,7 @@ constructor(props:any) {
 }
  
  
-    viewProd=(item : Product)=>{    
+    viewProd=(item : Product)=>{  
       this.setState({yes:true})
       this.pic=item.getPicture;
     }
@@ -37,6 +37,7 @@ constructor(props:any) {
     back=()=>{
       this.setState({yes:false})
     }
+
      searchFilter=(event:ChangeEvent)=>{
       let str=(event.target as HTMLInputElement).value.toUpperCase();
       let temp= productsList.getProductsList.filter(x=>x.getProductName.toUpperCase().indexOf(str)>-1)
@@ -53,6 +54,11 @@ constructor(props:any) {
       let arr = productsList.getProductsByCodeCategory(temp);
       this.setState({subProductsList:arr});
       }
+    }
+
+    outOfStack=()=>{
+      let arr = productsList.OutOfStockProductsfun();
+      this.setState({ subProductsList :arr});
     }
 
   render() {
@@ -72,7 +78,9 @@ constructor(props:any) {
             </> 
         ))}
       </select>
-      
+      {
+        <input type="button" className="select" value="out of stack" onClick={this.outOfStack}/>
+      }
       <div className="bigdiv">
     {        
       !this.state.yes &&
@@ -84,10 +92,10 @@ constructor(props:any) {
             <h3>{item.getProductName}</h3>
             <span> code: {item.getProductCode}</span>
             {/* <span>Category: {item.getProductCategory}</span> */}
-            <span>Price: {item.getProductPrice}</span>
-            <span> Units: {item.getProductUnits} $</span>
-            <h6>Click To see big </h6>
-            <img src={item.getPicture} onClick={() => this.viewProd(item)} ></img>
+            <span>Price: {item.getProductPrice} $</span>
+            <span> Units: {item.getProductUnits} </span>
+            <h6>Click To see big</h6>
+            <img src={item.getPicture} onClick={() => this.viewProd(item)}  title="click me"></img>
           </div>   
         </>   
       ))

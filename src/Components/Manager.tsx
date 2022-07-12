@@ -36,7 +36,6 @@ class Manager extends React.Component{
 
     EditProduct=(event:React.FormEvent<HTMLFormElement>)=>{
         event.preventDefault();
-        debugger
         this.temp.name=((event.target as HTMLFormElement)[0] as HTMLInputElement).value
         this.temp.code=parseInt(((event.target as HTMLFormElement)[1] as HTMLInputElement).value);
         this.temp.codeCat=parseInt(((event.target as HTMLFormElement)[2] as HTMLInputElement).value);
